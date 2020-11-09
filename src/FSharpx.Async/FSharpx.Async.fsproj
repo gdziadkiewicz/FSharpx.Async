@@ -4,6 +4,9 @@
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\paket-files\fsprojects\FSharpx.Collections\src\FSharpx.Collections\CircularBuffer.fs">
       <Paket>True</Paket>
