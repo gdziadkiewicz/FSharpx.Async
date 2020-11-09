@@ -1,9 +1,9 @@
 @echo off
-cls
 
-.paket\paket.exe restore
-if errorlevel 1 (
-  exit /b %errorlevel%
+dotnet tool restore
+dotnet restore
+if not "%*"=="" (
+    dotnet fake run build.fsx --parallel 3 --target %*
+) else (
+    dotnet fake run build.fsx --parallel 3
 )
-
-packages\build\FAKE\tools\FAKE.exe build.fsx %*
