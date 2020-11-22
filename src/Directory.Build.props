@@ -7,6 +7,7 @@
     <Description>Async extensions for F#</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/fsprojects/FSharpx.Async</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl>http://fsprojects.github.io/FSharpx.Async/img/logo.png</PackageIconUrl>
     <PackageTags>F#;async;fsharpx</PackageTags>
     <RepositoryType>git</RepositoryType>
@@ -15,8 +16,10 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19351-01" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <None Include="$(MSBuildThisFileDirectory)..\docs\files\img\logo.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
